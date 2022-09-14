@@ -1,0 +1,23 @@
+def cut(str1,m,n):
+    turn=1
+    s=str1
+    l=len(str1)
+    for i in str1:
+        str2=str1[-m:]
+        str1=str1.replace(' ','')[:-m]
+        str1=str2+str1
+        if (s!=str1):
+            turn=turn+1
+            str3=str1[-n:]
+            str1=str1.replace(' ','')[:-n]
+            str1=str3+str1
+        if(s==str1):
+            break
+        turn=turn+1
+    return(turn)
+str1=input("enter string")
+m=int(input())
+n=int(input())
+print(cut(str1,m,n))
+            
+    
