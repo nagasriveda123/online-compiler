@@ -1,0 +1,31 @@
+m=int(input("enter no.of rows"))
+a=[]
+for i in range(m):
+    l=list(map(int,input().split(" ")))
+    a.append(l)
+print('matrix is')
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        print(a[i][j],end=" ")
+    print()
+print("matrix in spiral form is")
+n=len(a[i])
+k=0
+l=0
+while(k<m and l<n):
+    for i in range(l,n):
+        print(a[k][i],end=" ")
+    k=k+1
+    for i in range(k,m):
+        print(a[i][n],end=" ")
+    n=n-1
+    if(k<m):
+        for i in range(n-1,(l-1),-1):
+            print(a[m-1][i],end=" ")
+        m=m-1
+    if(l<n):
+        for i in range(m-1,(k-1),-1):
+            print(a[i][l],end=" ")
+        l=l-1
+        
+
