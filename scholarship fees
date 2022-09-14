@@ -1,0 +1,30 @@
+branch=input("enter branch")
+score=int(input("enter score"))
+fee=int(input("enter fee"))
+if(branch=="arts"):
+    if(score>=90):
+        sa=fee*(50/100)
+        ff=fee-sa
+        print("the final fee is ",ff)
+    elif (score%2!=0 and score<90):
+        sa=fee*(5/100)
+        ff=fee-sa
+        print("the final fee is ",ff)
+    else:
+        fee=ff
+        print("the final fee is ",ff)
+if(branch=="enginnering"):
+    if(score>85):
+        sa=fee*(50/100)
+        ff=fee-sa
+        print("the final fee is ",ff)
+    elif(score%7==0 and score<85):
+        sa=fee*(5/100)
+        ff=fee-sa
+        print("the final fee is ",ff)
+    else:
+        fee=ff
+        print("the final fee is ",ff)
+        
+        
+
